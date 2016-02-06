@@ -1,6 +1,6 @@
 # OrientR
 
-OrientR is a REST API wrapper for OrientDB. It allows you to run queries on OrientDB over its REST interface.
+OrientR is a REST API wrapper for OrientDB.
 
 ## Contents
 
