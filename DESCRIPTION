@@ -1,0 +1,18 @@
+Package: OrientR
+Type: Package
+Title: R Wrapper for OrientDB's REST API
+Version: 0.3.0
+Date: 2016-02-06
+Author: Mahmood S. Zargar & Mohamed Karim Bouaziz
+Maintainer: Mohamed Karim Bouaziz <mohamed.karim.bouaziz@gmail.com>
+Description: This package provides a bare-bones interface to OrientDB's REST
+    API.
+License: Apache-2.0
+Imports:
+    RCurl,
+    jsonlite,
+    tidyr,
+    lubridate,
+    magrittr
+LazyData: TRUE
+RoxygenNote: 5.0.1
