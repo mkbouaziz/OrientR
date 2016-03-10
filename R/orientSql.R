@@ -18,7 +18,7 @@
 #'
 #' @param orient An element created with \code{orientConnect}.
 #'
-#' @param database The database to be user in SQL Query.
+#' @param database The database to be used in SQL Query.
 #'
 #' @param batch The number of record in return data (in SELECT Query), default is \code{-1} it means unlimited records.
 #'

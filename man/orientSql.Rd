@@ -11,7 +11,7 @@ orientSql(orient, database, query, batch = -1, conv.dates = TRUE,
 \arguments{
 \item{orient}{An element created with \code{orientConnect}.}
 
-\item{database}{The database to be user in SQL Query.}
+\item{database}{The database to be used in SQL Query.}
 
 \item{batch}{The number of record in return data (in SELECT Query), default is \code{-1} it means unlimited records.}
 
