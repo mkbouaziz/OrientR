@@ -6,7 +6,8 @@
 #' Connect to OrientDB DataBase
 #'
 #' @description
-#' \code{orientConnect} Execute a SQL query against the OrientDB database.
+#' \code{orientConnect} Create an OrientDB connection string to be used in further
+#'  commands
 #'
 #' @author
 #' Mohamed Karim Bouaziz \email{mohamed.karim.bouaziz@gmail.com}
