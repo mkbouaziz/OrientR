@@ -1,41 +1,24 @@
-#' @rdname getUsers
+#' @rdname orientGetDocumentByClass
 #' @export
 #'
 #' @title
-#' Extract information about one or more Facebook users
+#' Retive a document from orientdb
 #'
 #' @description
-#' \code{getUsers} retrieves public information about one or more Facebook users.
-#'
-#' After version 2.0 of the Facebook API, only id, name, and picture are available
-#' through the API. All the remaining fields will be missing.
+#' \code{orientGetDocumentByClass} retrieves a document form orient
 #'
 #' @author
 #' Mohamed Karim Bouaziz \email{mohamed.karim.bouaziz@gmail.com}
 #'
 #' @seealso \code{\link{orientConnect}}, \code{\link{orientDataBases}}, \code{\link{orientDataBaseDetail}}
 #'
-#' @param users A vector of user IDs.
+#' @param orient An element created with \code{orientConnect}.
 #'
-#' @param token Either a temporary access token created at
-#' \url{https://developers.facebook.com/tools/explorer} or the OAuth token
-#' created with \code{fbOAuth}.
-#'
-#' @param private_info If \code{FALSE}, will return only information that is
-#' publicly available for all users (name, gender, locale, profile picture).
-#' If \code{TRUE}, will return additional information for users who are friends
-#' with the authenticated user: birthday, location, hometown, and relationship
-#' status. Note that these fields will ONLY be returned for friends and when
-#' the version of the token that is used to query the API is 1.0. For other
-#' users, they will be \code{NA}, even if they are visible on Facebook via web.
-#'
-#' @examples \dontrun{
-#' ## See examples for fbOAuth to know how token was created.
-#' ## Getting information about the authenticated user
-#'  load("fb_oauth")
-#'	fb <- getUsers("me", token=fb_oauth)
-#'	fb$username
-#' }
+#' @param database The database to be used for retrieving a document.
+#' 
+#' @param recordPosition recordPosition of your orient node e.g. a node has the id #12:5 where 12 is your classid
+#'  and 5 is your recordPosition
+#' 
 #'
 orientGetDocumentByClass<-
   function(orient, database,className,recordPosition, ...) {
