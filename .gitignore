@@ -3,3 +3,4 @@
 .RData
 OrientR.Rproj
 .Rbuildignore
+..Rcheck
