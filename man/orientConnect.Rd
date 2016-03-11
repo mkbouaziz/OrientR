@@ -17,7 +17,8 @@ orientConnect(host = "localhost", username = "admin", password = "admin",
 \item{port}{The Port of OrientDB DataBase (by default 2480)}
 }
 \description{
-\code{orientConnect} Execute a SQL query against the OrientDB database.
+\code{orientConnect} Create an OrientDB connection string to be used in further
+ commands
 }
 \author{
 Mohamed Karim Bouaziz \email{mohamed.karim.bouaziz@gmail.com}
