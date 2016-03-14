@@ -1,6 +1,5 @@
 library(httr)
 
-
 # TODO: implement fetchPlan
 # TODO: implement updateMethod for PUT requests e.g. ?updateMode=full|partial]
 # http://<server>:[<port>]/document/<database>/<record-id>[/<fetchPlan>]
@@ -19,12 +18,24 @@ createDocumentUrl = function(orient, database, recordId = NULL) {
 }
 
 
+#' @rdname orientCheckDocument
+#' @export
+#' @title
+#' Check 
+
+
 # HEAD
 orientCheckDocument = function(orient, database, recordId) {
   url = createDocumentUrl(orient, database, recordId)
   result = httr::HEAD(url)
   result$status_code == 204
 }
+
+#' @rdname orientGetDocument
+#' @export
+#' @title
+#' Get 
+
 
 # GET
 orientGetDocument = function(orient, database, recordId) {
@@ -37,6 +48,12 @@ orientGetDocument = function(orient, database, recordId) {
   
   httr::content(result)
 }
+
+#' @rdname orientCreateDocument
+#' @export
+#' @title
+#' POST 
+
 
 # POST
 # content as named list
@@ -51,6 +68,12 @@ orientCreateDocument = function(orient, database, content) {
   
   httr::content(result)
 }
+
+#' @rdname orientUpdateDocument
+#' @export
+#' @title
+#' PUT 
+
 
 # PUT
 # content as named list
@@ -68,6 +91,11 @@ orientUpdateDocument = function(orient, database, recordId = NULL, content) {
   httr::content(result)
 }
 
+#' @rdname orientAppendDocument
+#' @export
+#' @title
+#' Append 
+
 
 # PATCH
 # content as named list
@@ -84,6 +112,12 @@ orientAppendDocument = function(orient, database, recordId = NULL, content) {
   
   result
 }
+
+#' @rdname orientDelteDocument
+#' @export
+#' @title
+#' DELETE 
+
 
 # DELETE
 orientDeleteDocument = function(orient, database, recordId) {
